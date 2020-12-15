@@ -1,4 +1,4 @@
-package apellido.nombreDNI;
+package Figueredo.Juan36797436;
 
 import java.net.PortUnreachableException;
 import java.util.ArrayList;
@@ -28,9 +28,10 @@ public class Camion  {
 		 *   
 		 * 
 		 */
+		return listaProductos.add(producto);
 		
 		
-		return null;
+		
 	
 	}
 	
@@ -42,8 +43,14 @@ public class Camion  {
 		 * por otro lado elimina dicho producto de la coleccion
 		 * encaso que el idProducto no se encuentre retorna una exception ProductoInexistenteException
 		 */
-		
+		for (Producto producto : listaProductos) {
+			producto.getId().equals(idProducto);
+			listaProductos.remove(producto);
+			return producto;
+		}
 	return null;
+		
+	
 	}
 	
 

@@ -1,4 +1,4 @@
-package apellido.nombreDNI;
+package Figueredo.Juan36797436;
 
 public class Producto {
 
@@ -6,6 +6,16 @@ public class Producto {
 	private Double precio;
 	private String descripcion;
 	private Double peso;
+	
+	
+	
+	public Producto(Integer id, Double precio, String descripcion, Double peso) {
+		super();
+		this.id = id;
+		this.precio = precio;
+		this.descripcion = descripcion;
+		this.peso = peso;
+	}
 	public Integer getId() {
 		return id;
 	}

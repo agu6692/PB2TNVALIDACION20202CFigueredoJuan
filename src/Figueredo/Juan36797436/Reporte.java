@@ -1,10 +1,18 @@
-package apellido.nombreDNI;
+package Figueredo.Juan36797436;
 
 public class Reporte {
 
 	private Double totalVentas;
 	private Double totalIva;
 	private Double totalNeto;
+	
+	
+	public Reporte(Double totalVentas, Double totalIva, Double totalNeto) {
+		super();
+		this.totalVentas = totalVentas;
+		this.totalIva = totalIva;
+		this.totalNeto = totalNeto;
+	}
 	
 	
 	public String imprimirReporte() {

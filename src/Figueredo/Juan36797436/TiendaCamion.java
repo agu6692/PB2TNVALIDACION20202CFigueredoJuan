@@ -1,4 +1,4 @@
-package apellido.nombreDNI;
+package Figueredo.Juan36797436;
 
 import java.util.ArrayList;
 import java.util.List;

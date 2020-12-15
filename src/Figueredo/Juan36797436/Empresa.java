@@ -1,4 +1,4 @@
-package apellido.nombreDNI;
+package Figueredo.Juan36797436;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -16,6 +16,7 @@ public class Empresa {
 	private HashMap<Integer, Camion> flota;
 
 	public Empresa() {
+		flota = new HashMap<>();
 
 	}
 
@@ -23,12 +24,15 @@ public class Empresa {
 
 		// se agrega uncamion el primer camion tiene como identificador 0 el el segundo
 		// 1 2 3.4
+		for (int i = 0; i < flota.size(); i++) {
+			flota.put(i, camion);
+		}
 
 	}
 
 	public Integer cantidadDeCamiones() {
 
-		return null;
+		return flota.size();
 	}
 
 	public TreeSet<Camion> obtenerTiendascamionOrdenadoPorPatente() {

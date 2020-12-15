@@ -1,4 +1,4 @@
-package apellido.nombreDNI;
+package Figueredo.Juan36797436;
 
 import static org.junit.Assert.assertEquals;
 
@@ -6,9 +6,9 @@ import java.util.TreeSet;
 
 import org.junit.Test;
 
-import apellido.nombreDNI.Camion;
-import apellido.nombreDNI.Empresa;
-import apellido.nombreDNI.TiendaCamion;
+import Figueredo.Juan36797436.Camion;
+import Figueredo.Juan36797436.Empresa;
+import Figueredo.Juan36797436.TiendaCamion;
 
 public class TestEmpresa {
 	
