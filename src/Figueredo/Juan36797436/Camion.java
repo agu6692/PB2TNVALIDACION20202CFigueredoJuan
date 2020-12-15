@@ -18,7 +18,8 @@ public class Camion  {
 	
 	
 	public Camion (String patente) {
-	
+		listaProductos = new ArrayList<>();
+		this.patente = patente;
 	}
 	
 	
@@ -36,19 +37,22 @@ public class Camion  {
 	}
 	
 	
-	public Producto descargarProducto(Integer idProducto) {
+	public Producto descargarProducto(Integer idProducto) throws ProductoInexistenteException{
 	
 		/*
 		 * buesca y un producto por su id y devuelve el producto encontrado
 		 * por otro lado elimina dicho producto de la coleccion
 		 * encaso que el idProducto no se encuentre retorna una exception ProductoInexistenteException
 		 */
+		Producto productoABuscar = null;
 		for (Producto producto : listaProductos) {
-			producto.getId().equals(idProducto);
-			listaProductos.remove(producto);
-			return producto;
+			if(producto.getId().equals(idProducto)) {
+				productoABuscar = producto;
+				listaProductos.remove(producto);
+				return productoABuscar;
+			}
 		}
-	return null;
+		throw new ProductoInexistenteException();
 		
 	
 	}

@@ -16,6 +16,11 @@ public class TestEmpresa {
 	//Opcional
 	@Test
 	public void queSeAgregueUnCamion() {
+		Camion vw = new Camion("123");
+		Empresa luxcar = new Empresa();
+		luxcar.agregarCamion(vw);
+		Integer valor = 1;
+		assertEquals(valor, luxcar.cantidadDeCamiones());
 	
 	}
 	

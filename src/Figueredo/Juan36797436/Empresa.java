@@ -14,6 +14,7 @@ public class Empresa {
 	// conveniente
 	private String nombre;
 	private HashMap<Integer, Camion> flota;
+	private Integer idCamion=0;
 
 	public Empresa() {
 		flota = new HashMap<>();
@@ -24,8 +25,9 @@ public class Empresa {
 
 		// se agrega uncamion el primer camion tiene como identificador 0 el el segundo
 		// 1 2 3.4
-		for (int i = 0; i < flota.size(); i++) {
-			flota.put(i, camion);
+		if(camion != null) {
+			flota.put(idCamion, camion);
+			idCamion++;
 		}
 
 	}
