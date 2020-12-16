@@ -52,7 +52,7 @@ public class Camion  {
 				return productoABuscar;
 			}
 		}
-		throw new ProductoInexistenteException();
+		throw new ProductoInexistenteException("producto inexistente");
 		
 	
 	}

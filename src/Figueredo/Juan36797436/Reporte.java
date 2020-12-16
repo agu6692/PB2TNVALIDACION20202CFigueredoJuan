@@ -7,11 +7,9 @@ public class Reporte {
 	private Double totalNeto;
 	
 	
-	public Reporte(Double totalVentas, Double totalIva, Double totalNeto) {
+	public Reporte() {
 		super();
-		this.totalVentas = totalVentas;
-		this.totalIva = totalIva;
-		this.totalNeto = totalNeto;
+		
 	}
 	
 	
