@@ -33,10 +33,14 @@ public class TestCamion {
 	
 	//obligatorio
 	@Test
-	
-	public void queDescargueUnProductoInexistenteLanceUnaException() {
-	
-	
-	}
+    (expected = ProductoInexistenteException.class)
+    public void queDescargueUnProductoInexistenteLanceUnaException() throws ProductoInexistenteException{
+        Producto primerProducto = new Producto(1,10.0,"coca",1.0);
+        Camion primercamion = new Camion("12345");
+
+        primercamion.cargarProducto(primerProducto);
+        primercamion.descargarProducto(2);
+
+    }
 	
 }
