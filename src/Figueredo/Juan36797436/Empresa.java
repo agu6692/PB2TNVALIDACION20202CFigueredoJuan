@@ -15,9 +15,12 @@ public class Empresa {
 	private String nombre;
 	private HashMap<Integer, Camion> flota;
 	private Integer idCamion=0;
+	private Integer cantidadDeCamiones=0;
+	private ArrayList<Camion> camionesAOrdenar = new ArrayList<Camion>();
 
-	public Empresa() {
+	public Empresa(String nombre) {
 		flota = new HashMap<>();
+		this.nombre=nombre;
 
 	}
 
@@ -25,10 +28,10 @@ public class Empresa {
 
 		// se agrega uncamion el primer camion tiene como identificador 0 el el segundo
 		// 1 2 3.4
-		if(camion != null) {
-			flota.put(idCamion, camion);
-			idCamion++;
-		}
+		this.flota.put(this.idCamion++,camion);
+		this.camionesAOrdenar.add(camion);
+		++cantidadDeCamiones;
+		
 
 	}
 
@@ -40,7 +43,11 @@ public class Empresa {
 	public TreeSet<Camion> obtenerTiendascamionOrdenadoPorPatente() {
 		
 		
-		return null;
+		PorPatenteComparator ordenador = new PorPatenteComparator();
+		TreeSet<Camion> camionesOrdenados = new TreeSet<Camion>(ordenador);
+		camionesOrdenados.addAll(camionesAOrdenar);
+		
+		return camionesOrdenados;
 	}
 
 }

@@ -17,7 +17,7 @@ public class TestEmpresa {
 	@Test
 	public void queSeAgregueUnCamion() {
 		Camion vw = new Camion("123");
-		Empresa luxcar = new Empresa();
+		Empresa luxcar = new Empresa("volks");
 		luxcar.agregarCamion(vw);
 		Integer valor = 1;
 		assertEquals(valor, luxcar.cantidadDeCamiones());
@@ -28,6 +28,19 @@ public class TestEmpresa {
 //Obligatorio
 	@Test
 	public void QueSeObtengaUnaListaDeCaionesTiendaOrdenadosPorPatentes() {
+		Empresa nueva = new Empresa("samsung");
+		Camion camion1 = new Camion("AAA111");
+		Camion camion2 = new Camion("BBB111");
+		Camion camion3 = new Camion("CCC111");
+		Camion camion4 = new Camion("DDD111");
+		
+		nueva.agregarCamion(camion1);
+		nueva.agregarCamion(camion2);
+		nueva.agregarCamion(camion3);
+		nueva.agregarCamion(camion4);
+		
+		assertEquals(camion1, nueva.obtenerTiendascamionOrdenadoPorPatente().first());
+		assertEquals(camion4, nueva.obtenerTiendascamionOrdenadoPorPatente().last());
 		
 		
 	}

@@ -27,7 +27,7 @@ public class TestCamion {
 		Producto nuevo = new Producto(1234, 10.0, "packShampo", 1.0);
 		Camion vw = new Camion("12345");
 		vw.cargarProducto(nuevo);
-		assertEquals(nuevo,vw.descargarProducto(0));
+		assertEquals(nuevo,vw.descargarProducto(1234));
 	
 	}
 	
